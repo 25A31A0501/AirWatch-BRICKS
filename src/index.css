@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-heading: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Leaflet map styling */
+@import "leaflet/dist/leaflet.css";
+
+/* Design Theme: Bold Typography & Climate Response Palette */
+:root {
+  --color-primary-dark: #123C35;
+  --color-primary-green: #16866B;
+  --color-teal: #35BFAE;
+  --color-light-mint: #E9F7F1;
+  --color-off-white: #F8F8F4;
+  --color-dark-text: #26332F;
+  --color-muted-text: #74817C;
+  --font-manrope: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background-color: #F8F8F4;
+  color: #26332F;
+  font-family: var(--font-manrope);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Headings: Manrope with SemiBold (600) / Bold (700) */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3, h4 {
+  font-weight: 600;
+}
+
+/* Body typography */
+p, span, div, input, textarea, select, button, .font-body {
+  font-family: var(--font-manrope);
+}
+
+/* Small labels / Eyebrow text: IBM Plex Mono with tracking and uppercase */
+.font-label, .font-eyebrow, .font-tag {
+  font-family: var(--font-plex-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Numbers & Statistics: Manrope 500/600 with clear presence */
+.font-stat, .font-number, .font-metric {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+}
+
+.font-mono-data {
+  font-family: var(--font-plex-mono);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2cfca;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8e9e99;
+}
+
+/* Leaflet container fixes */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  z-index: 10;
+  font-family: inherit;
+}
+
+/* Pulse animation for active critical markers */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.marker-pulse {
+  animation: pulse-ring 2s infinite ease-in-out;
+}

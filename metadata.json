@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix BRICS AirWatch – Climate Response Network",
+  "description": "AI-powered citizen climate and air pollution response platform connecting citizen reports, environmental intelligence, government dispatch, and community action across BRICS regions.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
